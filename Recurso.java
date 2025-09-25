@@ -1,7 +1,7 @@
 public class Recurso {
 
     private final int id;
-    private String donoAtual; // Para sabermos quem está usando o recurso
+    private String donoAtual; 
 
     public Recurso(int id) {
         this.id = id;
@@ -12,8 +12,8 @@ public class Recurso {
         this.donoAtual = nomeDaTarefa;
         System.out.println(">>> Tarefa " + nomeDaTarefa + " começou a usar o Recurso " + this.id);
 
-        // Simula o tempo que a tarefa leva para usar o recurso
-        Thread.sleep(2000); // 2 segundos
+     
+        Thread.sleep(2000); 
 
         System.out.println("<<< Tarefa " + nomeDaTarefa + " terminou de usar o Recurso " + this.id);
         this.donoAtual = "Livre";
