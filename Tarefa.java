@@ -1,30 +1,20 @@
 public class Tarefa implements Runnable {
 
     private final String nome;
-    private final PoolDeRecursos pool;
+    private final Agendador agendador; 
     private final TipoTarefa tipo;
 
-    public Tarefa(String nome, PoolDeRecursos pool, TipoTarefa tipo) {
+    public Tarefa(String nome, Agendador agendador, TipoTarefa tipo) { 
         this.nome = nome;
-        this.pool = pool;
-        this.tipo = tipo; 
+        this.agendador = agendador; 
+        this.tipo = tipo;
     }
 
-    public String getNome() {
-        return nome;
-    }
-
-    public TipoTarefa getTipo() {
-        return tipo; 
-    }
+    public String getNome() { return nome; }
+    public TipoTarefa getTipo() { return tipo; }
 
     @Override
     public void run() {
-        try {
-            pool.acessarRecurso(this); 
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-            System.out.println("Tarefa " + nome + " foi interrompida.");
-        }
+        agendador.adicionarTarefa(this); 
     }
 }
