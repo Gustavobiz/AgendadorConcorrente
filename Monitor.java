@@ -12,8 +12,7 @@ public class Monitor implements Runnable {
     public void run() {
         while (true) {
             try {
-                Thread.sleep(2000); // Atualiza a cada 2 segundos
-
+                Thread.sleep(2000); 
                 System.out.println("\n===================== MONITOR ====================");
                 System.out.println("STATUS DO POOL: " + pool.getStatusRecursos());
                 System.out.println("FILA DE ESPERA: " + agendador.getStatusFila());
