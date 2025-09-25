@@ -27,6 +27,19 @@ public class PoolDeRecursos {
         }
     }
 
+    public String getStatusRecursos() {
+        lockControle.lock(); 
+        try {
+            StringBuilder status = new StringBuilder();
+            for (Recurso r : recursos) {
+                status.append("Recurso ").append(r.getId()).append(": ").append(r.getDonoAtual()).append(" | ");
+            }
+            return status.toString();
+        } finally {
+            lockControle.unlock();
+        }
+    }
+
 
     public void acessarRecurso(Tarefa tarefa) throws InterruptedException {
         if (tarefa.getTipo() == TipoTarefa.LEITURA) {
