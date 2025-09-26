@@ -2,7 +2,7 @@
 
 ## Descrição
 
-Este é um simulador de um servidor de agendamento de recursos concorrentes, desenvolvido em Java. O projeto demonstra a gestão de um pool de recursos limitados que são disputados por múltiplas threads (tarefas). A simulação implementa e resolve problemas clássicos da programação concorrente, como o **Problema dos Leitores e Escritores** e a **Inanição (Starvation)**.
+Este é um simulador de um servidor de agendamento de recursos concorrentes, desenvolvido em Java. O projeto demonstra a gestão de um pool de recursos limitados que são disputados por múltiplas threads (tarefas), a simulação implementa e resolve problemas clássicos da programação concorrente, como o **Problema dos Leitores e Escritores** e a **Inanição (Starvation)**.
 
 ## Contexto do Projeto
 
